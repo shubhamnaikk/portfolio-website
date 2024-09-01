@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-black overflow-x-hidden font-poppins">
+    <header
+      class="flex justify-between items-center text-xl max-w-screen-3xl mx-auto w-full px-2.5 md:px-20 py-6 sticky top-0 bg-black z-50">
+      <div class="font-bold text-2xl">shubhamnaik.</div>
+
+      <!-- Hamburger Button -->
+      <div class="md:hidden">
+        <button
+          id="nav-toggle"
+          class="focus:outline-none"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav
+        id="nav-menu"
+        class="hidden md:flex md:gap-x-6 md:items-center text-lg flex-col md:flex-row gap-y-4 md:gap-y-0 absolute md:static top-0 left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left z-10 pt-20 md:pt-0">
+        <a href="#" class="block py-2 md:py-0">PROJECTS</a>
+        <a href="#" class="block py-2 md:py-0">CONTACT</a>
+        <a
+          href="./resume.pdf"
+          class="block py-2 md:py-1 px-4 text-xl rounded-full border border-blue-400 hover:bg-blue-400 text-blue-400 hover:text-white">
+          RESUME <i class="fa fa-download ml-1" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </header>
+
+    <script>
+      // JavaScript to toggle the navbar menu
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <main
+      class="flex flex-col md:flex-row justify-center md:justify-between mx-auto w-full px-4 md:px-20 h-[calc(100vh-12rem)] items-center">
+      <div
+        class="flex flex-row md:flex-col justify-center items-center gap-6 order-2 md:order-1 mt-8 md:mt-0">
+        <a
+          href="https://github.com/shubhamnaikk"
+          class="text-2xl"
+          target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="http://www.linkedin.com/in/shubham-naik-0b22031b6"
+          target="_blank"
+          class="text-2xl"
+          ><i class="fab fa-linkedin w-6 h-6"></i
+        ></a>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center gap-y-4 text-center order-1 md:order-2">
+        <span class="py-1 px-4 text-2xl rounded-full border border-white"
+          >Hello!</span
+        >
+        <p class="text-2xl">I'm Shubham,</p>
+        <h1
+          class="text-6xl font-bold text-blue-400 flex flex-col md:flex-row items-center gap-x-2">
+          Data <span id="changing-word">Scientist</span>
+        </h1>
+      </div>
+      <div
+        class="hidden md:block flex flex-col items-center justify-center gap-y-6 order-3 md:order-3">
+        <a
+          href="#about-me"
+          class="text-white font-medium tracking-widest whitespace-nowrap cursor-pointer">
+          SCROLL <i class="fa-solid fa-arrow-down-long ml-2 bounce"></i>
+        </a>
+      </div>
+    </main>
+
+    <script>
+      const words = ["Scientist", "Analyst", "Engineer"];
+      let currentIndex = 0;
+      const changingWordElement = document.getElementById("changing-word");
+
+      function changeWord() {
+        currentIndex = (currentIndex + 1) % words.length;
+        changingWordElement.textContent = words[currentIndex];
+      }
+
+      setInterval(changeWord, 4000); // Change word every 4 seconds
+    </script>
+    <img src="./wave.svg" class="w-full" />
+    <div
+      id="about-me"
+      class="max-w-screen-3xl mx-auto px-4 md:px-20 py-8 md:py-20 space-y-6 md:space-y-12">
+      <div class="flex justify-center">
+        <h2 class="px-6 font-medium py-2 rounded-full bg-[#0B60B0]/50">
+          About me
+        </h2>
+      </div>
+      <section
+        class="flex flex-col lg:flex-row items-center w-full space-y-8 lg:space-y-0">
+        <!-- Image Section -->
+        <div class="flex justify-center items-center basis-1/2">
+          <img src="./Shubham.png" alt="Profile" class="rounded-lg" />
+        </div>
+
+        <!-- Text Section -->
+        <div class="basis-1/2 space-y-8">
+          <h3 class="text-3xl font-semibold text-[#D1D5DB]">
+            Curious about me? Here you have it:
+          </h3>
+          <p class="text-[#D1D5DB] max-w-xl">
+            My name is Shubham Naik, and I am currently pursuing a Master of
+            Science in Data Analytics at San Jose State University. This
+            academic journey is the culmination of years of passion, curiosity,
+            and a drive to understand the intricate patterns hidden within vast
+            amounts of data.
+          </p>
+          <p class="text-[#D1D5DB] max-w-xl">
+            I hold a Bachelor's degree in Information Technology, where my
+            fascination with technology and data began. During my undergraduate
+            studies, I developed a strong foundation in programming, algorithms,
+            and database management. My coursework included a variety of
+            projects that allowed me to apply theoretical knowledge to
+            real-world problems, further igniting my interest in data analytics.
+          </p>
+          <p class="text-[#D1D5DB] max-w-xl">
+            Upon completing my master's degree, I aspire to work as a data
+            scientist or data analyst in a leading technology company. I am
+            particularly interested in roles that involve predictive modeling,
+            data mining, and machine learning. Ultimately, I aim to contribute
+            to projects that leverage data to drive innovation and create
+            positive societal impact.
+          </p>
+          <p class="text-[#D1D5DB] max-w-xl">
+            Outside of academics and work, I am passionate about play and
+            watching football. I believe in maintaining a balanced lifestyle,
+            and these activities help me stay motivated and energized.
+            Additionally, I enjoy networking with professionals and attending
+            industry conferences to broaden my horizons and gain new
+            perspectives.
+          </p>
+          <p class="text-[#D1D5DB] max-w-xl">
+            Finally, some quick bits about me.
+          </p>
+          <ul class="list-disc pl-8 space-y-2">
+            <li>B.E. in IT Engineering</li>
+            <li>Avid learner</li>
+            <li>Desire to uncover insights from data</li>
+            <li>Driven by curiosity</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <section class="text-white bg-[#0B60B0]/15 w-full">
+      <div
+        class="w-full text-center max-w-screen-3xl mx-auto px-4 md:px-20 py-8 md:py-32 space-y-6 md:space-y-12">
+        <!-- Skills Header -->
+        <div class="flex justify-center">
+          <h2 class="px-6 font-medium py-2 rounded-full bg-[#0B60B0]/50">
+            Skills
+          </h2>
+        </div>
+        <h3 class="text-2xl font-medium mb-6">
+          The skills, tools and technologies I am really good at:
+        </h3>
+
+        <!-- Skills Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/python--v1.png"
+              alt="Python"
+              class="mb-2" />
+            <span>Python</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/ios-filled/100/ffffff/sql.png"
+              alt="SQL"
+              class="mb-2" />
+            <span>SQL</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/html-5--v1.png"
+              alt="HTML"
+              class="mb-2" />
+            <span>HTML</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/css3.png"
+              alt="CSS"
+              class="mb-2" />
+            <span>CSS</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/ios/100/ffffff/mysql-logo.png"
+              alt="MySQL"
+              class="mb-2" />
+            <span>MySQL</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/power-bi.png"
+              alt="Power BI"
+              class="mb-2" />
+            <span>Power BI</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/tableau-software.png"
+              alt="Tableau"
+              class="mb-2" />
+            <span>Tableau</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/numpy.png"
+              alt="NumPy"
+              class="mb-2" />
+            <span>NumPy</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/pandas.png"
+              alt="Pandas"
+              class="mb-2" />
+            <span>Pandas</span>
+          </div>
+
+          <!-- Skill Item -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://img.icons8.com/color/96/000000/git.png"
+              alt="Git"
+              class="mb-2" />
+            <span>Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-white bg-[#111827] w-full">
+      <div
+        class="w-full max-w-screen-3xl mx-auto px-4 md:px-20 py-8 md:py-32 flex flex-col justify-center items-center gap-y-6 md:gap-y-12">
+        <div class="text-center flex justify-center items-center text-white">
+          <h2 class="px-6 font-medium py-2 rounded-full bg-[#374151]">
+            Experience
+          </h2>
+        </div>
+        <h3 class="text-2xl font-medium mb-6">
+          The skills, tools and technologies I am really good at:
+        </h3>
+        <div
+          class="bg-[#1F2937] text-white p-6 rounded-lg flex flex-col md:flex-row items-start shadow-lg gap-x-8">
+          <!-- Logo Section -->
+          <div class="flex-shrink-0">
+            <img
+              src="./beyon.png"
+              alt="Beyon Marketing Logo"
+              class="object-contain" />
+          </div>
+
+          <!-- Content Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold mb-2 text-left">Developer</h3>
+            <ul
+              class="list-disc pl-5 space-y-2 text-sm text-left text-[#D1D5DB] max-w-md">
+              <li>
+                Design and implementation of user-facing web pages and
+                applications. This includes creating and implementing visual
+                elements, layouts, and interactions using HTML, CSS, and
+                JavaScript.
+              </li>
+              <li>
+                Debugging and troubleshooting of cross-browser compatibility
+                issues and ensuring website/application accessibility and
+                performance optimization.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Date Section -->
+          <div class="text-right ml-auto">
+            <span class="text-sm text-gray-400">Sep 2023 - July 2024</span>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1F2937] text-white p-6 rounded-lg flex flex-col md:flex-row items-start shadow-lg gap-x-8">
+          <!-- Logo Section -->
+          <div class="flex-shrink-0">
+            <img
+              src="./sarvmatre.png"
+              alt="Sarvmatre Logo"
+              class="object-contain" />
+          </div>
+
+          <!-- Content Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold mb-2 text-left">UI/UX Intern</h3>
+            <ul
+              class="list-disc pl-5 space-y-2 text-sm text-left text-[#D1D5DB] max-w-md">
+              <li>
+                Assisted in conducting surveys, usability testing, and customer
+                interviews to gather information on user needs and behaviors.
+              </li>
+              <li>
+                Created wireframes, prototypes, and high-fidelity designs for
+                the website, ensuring that the final design was user-friendly
+                and met business requirements.
+              </li>
+              <li>
+                Provided design specifications and conducted user testing,
+                offering feedback on ways to improve the user experience.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Date Section -->
+          <div class="text-right ml-auto">
+            <span class="text-sm text-gray-400">Nov 2022 - Jan 2023</span>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1F2937] text-white p-6 rounded-lg flex flex-col md:flex-row items-start shadow-lg gap-x-8">
+          <!-- Logo Section -->
+          <div class="flex-shrink-0">
+            <img
+              src="./simplrr.png"
+              alt="Simplrr Logo"
+              class="object-contain" />
+          </div>
+
+          <!-- Content Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold mb-2 text-left">
+              Front-End Developer Intern
+            </h3>
+            <ul
+              class="list-disc pl-5 space-y-2 text-sm text-left text-[#D1D5DB] max-w-md">
+              <li>
+                Build responsive and visually appealing user interfaces using
+                HTML, CSS, and JavaScript.
+              </li>
+              <li>
+                Ensure cross-browser compatibility and mobile responsiveness.
+              </li>
+              <li>
+                Work closely with UX/UI designers to translate design mockups
+                into functional web pages.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Date Section -->
+          <div class="text-right ml-auto">
+            <span class="text-sm text-gray-400">Oct 2021 - Nov 2021</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-white bg-[#030712] w-full">
+      <div
+        class="w-full max-w-screen-3xl mx-auto px-4 md:px-20 py-8 md:py-32 flex flex-col justify-center items-center gap-y-6 md:gap-y-12">
+        <div class="text-center flex justify-center items-center text-white">
+          <h2 class="px-6 font-medium py-2 rounded-full bg-[#374151]">
+            Projects
+          </h2>
+        </div>
+        <h3 class="text-2xl font-medium mb-6">
+          Some of the noteworthy projects I have built:
+        </h3>
+
+        <div
+          class="bg-[#1F2937] text-white rounded-lg flex flex-col md:flex-row items-start shadow-lg gap-x-8">
+          <!-- Image Section -->
+          <div class="flex-shrink-0 bg-[#374151] p-8 rounded-l-lg">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Fiskil Project"
+              class="rounded-lg shadow-lg" />
+          </div>
+
+          <!-- Content Section -->
+          <div class="space-y-6 p-8">
+            <h3 class="text-xl font-semibold">Fiskil</h3>
+            <p class="text-[#D1D5DB] max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis
+              in faucibus orci luctus et ultrices posuere cubilia curae.
+            </p>
+            <div class="flex flex-wrap gap-2 max-w-md">
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >React</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Next.js</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Typescript</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Nest.js</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >PostgreSQL</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Tailwindcss</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Figma</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Cypress</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Storybook</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Git</span
+              >
+            </div>
+            <div class="flex justify-start items-center">
+              <a
+                href="#"
+                target="_blank"
+                class="text-[#D1D5DB] hover:text-white">
+                <i class="fas fa-external-link-alt w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1F2937] text-white rounded-lg flex flex-col md:flex-row items-start shadow-lg gap-x-8">
+          <!-- Image Section -->
+          <div class="flex-shrink-0 bg-[#374151] p-8 rounded-r-lg">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Fiskil Project"
+              class="rounded-lg shadow-lg" />
+          </div>
+
+          <!-- Content Section -->
+          <div class="space-y-6 order-first p-8">
+            <h3 class="text-xl font-semibold">Fiskil</h3>
+            <p class="text-[#D1D5DB] max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis
+              in faucibus orci luctus et ultrices posuere cubilia curae.
+            </p>
+            <div class="flex flex-wrap gap-2 max-w-md">
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >React</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Next.js</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Typescript</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Nest.js</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >PostgreSQL</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Tailwindcss</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Figma</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Cypress</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Storybook</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Git</span
+              >
+            </div>
+            <div class="flex justify-start items-center">
+              <a
+                href="#"
+                target="_blank"
+                class="text-[#D1D5DB] hover:text-white">
+                <i class="fas fa-external-link-alt w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#1F2937] text-white rounded-lg flex flex-col md:flex-row items-start shadow-lg gap-x-8">
+          <!-- Image Section -->
+          <div class="flex-shrink-0 bg-[#374151] p-8 rounded-l-lg">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="Fiskil Project"
+              class="rounded-lg shadow-lg" />
+          </div>
+
+          <!-- Content Section -->
+          <div class="space-y-6 p-8">
+            <h3 class="text-xl font-semibold">Fiskil</h3>
+            <p class="text-[#D1D5DB] max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis
+              in faucibus orci luctus et ultrices posuere cubilia curae.
+            </p>
+            <div class="flex flex-wrap gap-2 max-w-md">
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >React</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Next.js</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Typescript</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Nest.js</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >PostgreSQL</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Tailwindcss</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Figma</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Cypress</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Storybook</span
+              >
+              <span
+                class="bg-gray-700 text-gray-300 text-sm px-3 py-1 rounded-full"
+                >Git</span
+              >
+            </div>
+            <div class="flex justify-start items-center">
+              <a
+                href="#"
+                target="_blank"
+                class="text-[#D1D5DB] hover:text-white">
+                <i class="fas fa-external-link-alt w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- Header -->
+      <div class="bg-black text-white py-8 space-y-8">
+        <div class="text-center space-y-8">
+          <div class="text-center flex justify-center items-center text-white">
+            <h2 class="px-6 font-medium py-2 rounded-full bg-[#374151]">
+              Get in touch
+            </h2>
+          </div>
+          <p>
+            What's next? Feel free to reach out to me if you're looking for a
+            developer, have a query, or simply want to connect.
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="flex flex-col items-center space-y-4 mb-8">
+          <div class="flex items-center text-xl space-x-2">
+            <i class="fas fa-envelope w-6 h-6"></i>
+            <a href="mailto:shubhammanisha.naik@sjsu.edu" class="font-medium"
+              >shubhammanisha.naik@sjsu.edu</a
+            >
+            <button
+              onclick="navigator.clipboard.writeText('shubhammanisha.naik@sjsu.edu')">
+              <i class="fas fa-copy w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="flex items-center text-xl space-x-2">
+            <i class="fas fa-phone w-6 h-6"></i>
+            <a href="tel:1 408-639-5672" class="font-medium">+1 408-639-5672</a>
+            <button onclick="navigator.clipboard.writeText('1 408-639-5672')">
+              <i class="fas fa-copy w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="flex justify-center items-center space-x-4 mb-8">
+            <a
+              href="https://github.com/shubhamnaikk"
+              target="_blank"
+              class="text-gray-400 hover:text-white">
+              <i class="fab fa-github w-6 h-6"></i>
+            </a>
+            <a
+              href="http://www.linkedin.com/in/shubham-naik-0b22031b6"
+              target="_blank"
+              class="text-gray-400 hover:text-white"
+              ><i class="fab fa-linkedin w-6 h-6"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+      </div>
+      <!-- Footer -->
+      <div class="bg-[#1F2937] py-4">
+        <p class="text-center text-sm text-gray-400">
+          © 2024 | <span class="underline">Designed</span> and
+          <span class="underline">coded</span> with ❤️ by Shubham Naik
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
